@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+.imageContainer {
+  position: relative; /* Position relative to allow absolute positioning of elements */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.backgroundImage {
+  width: 100%; /* Make the image take full width */
+  height: 100%; /* Make the image take full height */
+  object-fit: cover; /* Ensure the image scales proportionally */
+}
+
+.buttonContainer {
+  position: absolute; /* Absolute positioning on top of the image */
+  bottom: 20px; /* Position buttons 20px from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  display: flex; /* Use flexbox for horizontal alignment */
+  gap: 10px; /* Add space between buttons */
+}
+
+.overlayButton {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #c69a42, #ceae6d, #c69a42);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlayButton:hover {
+ background: linear-gradient(90deg, #9e792e, #c29d54, #b08531);
+}
+.loginForm,
+.signupForm {
+  width: 500px;
+  display: inline-block;
+  /* border: 2px solid #767676; */
+  box-shadow: 2px 2px 10px #000;
+  border-radius: 2px;
+  padding: 10px;
+  animation: slideIn 1000ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.loginBG,
+.signupBG{
+  background-image: url("../public/images/veravogueLogo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loginLabel {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+  color: #f5b52b;
+}
+.loginInput {
+  margin: 10px;
+  width: 200px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background: linear-gradient(90deg, #c69a42, #ceae6d, #c69a42);
+  font-weight: 600;
+}
+.loginHead,
+.signupHead,.updateHead {
+  color: #f8bb21;
+}
+.homeDiv {
+  position: relative;
+  bottom: 43%;
+  left: 65%;
+}
+.homeIcon {
+  width: 20px;
+  position: relative;
+  top: 10%;
+}
+.homeLink {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+}
+.loginButton,.updateBtn,.signupbtn {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #c69a42, #ceae6d, #c69a42);
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.signupText,.loginText {
+  color: #fff;
+}
+.signupLink,.loginLink {
+  color: #f8bb21;
+}
+.navBar {
+  background: linear-gradient(90deg, #d5a33d, #caa762, #cf982a);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.navLink {
+  text-decoration: none;
+  color: #000;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.logoutLink,.updateLink,.deleteAccountLink {
+  text-decoration: none;
+  color: #000;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.logoutDiv,.updateProfileDiv ,.deleteAccountDiv{
+  background-color: #db9c1e;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+.logoutDiv:hover {
+  border: 1px solid #000;
+  box-shadow: 2px 2px 5px #000;
+}
+.logoutDiv:active {
+  background-color: #f5b52b;
+}
+.updateProfileDiv:hover{
+  border: 1px solid #000;
+  box-shadow: 2px 2px 5px #000;
+}
+.updateProfileDiv:active{
+  background-color: #f5b52b;
+}
+.exitIcon {
+  width: 20px;
+  height: 20px;
+}
+.userProfile{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px ;
+  margin: 10px;
+}
+.userProfileDiv{
+  border-top: 1px solid #636262;
+  background: linear-gradient(90deg, #141414, #202020, #171717);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userProfileDetails{
+  margin: 10px;
+  color: #db9c1e;
+}
+.userForm{
+  border-top: 2px solid #3a3a3a;
+  padding: 5px;
+  background: linear-gradient(90deg, #141414, #202020, #171717);
+}
+.userFormInput{
+  margin: 10px;
+  width: 250px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background: linear-gradient(90deg, #c69a42, #ceae6d, #c69a42);
+  font-weight: 600;
+}
+.updateIcon{
+  width: 25px;
+  height: 25px;
+}
+.updateProfilePic{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.updatePage {
+  /* background-image: url("../public/images/updateBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  background: linear-gradient(90deg, #141414, #202020, #171717);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.updateForm{
+  width: 500px;
+  display: inline-block;
+  /* border: 2px solid #767676; */
+  box-shadow: 2px 2px 10px #000;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.updateInput{
+  margin: 10px;
+  width: 200px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background: linear-gradient(90deg, #c69a42, #ceae6d, #c69a42);
+  font-weight: 600;
+  border-radius: 2px;
+}
+.leftArrowIcon{
+  filter: invert(1);
+  position: absolute; /* Position it relative to the screen */
+  top: 10px; /* Distance from the top */
+  left: 10px; /* Distance from the left */
+  width: 30px; /* Adjust icon size as needed */
+  height: 30px;
+}
+.deleteAccountIcon{
+  width: 25px;
+  height: 25px;
+}
+.deleteAccountDiv:hover{
+  border: 1px solid #000;
+  box-shadow: 2px 2px 5px #000;
+}
+.deleteAccountDiv:active{
+  background-color: #d5a33d;
+}
