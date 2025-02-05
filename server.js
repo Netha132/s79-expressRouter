@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const path = require("path"); //render.com
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ const expressRouter = require('./models/expressRouter');
 const app = express();
 app.use(cors());
 app.use("/uploads", express.static("uploads"));
+app.use(express.static(path.join(__dirname,"./client/build"))) //render.com
 
 let authorise = (req,res,next)=>{
 
@@ -32,9 +34,15 @@ app.use("/signup",signupRouter);
 
 app.use("/expressRouter",expressRouter);
 
+
+
 app.listen( process.env.port, () => {
   console.log("Server started at ");
 });
+
+app.get("*",(req,res)=>{
+  res.sendFile("./client/build/index.html");  //render.com
+})
 
 // let expressRouter = new mongoose.model('expressRouter',routerSchema,"expressDetails");
 
