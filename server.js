@@ -33,7 +33,7 @@ app.use("/signup",signupRouter);
 app.use("/expressRouter",expressRouter);
 
 app.listen( process.env.port, () => {
-  console.log("Server started at http://localhost:2233");
+  console.log("Server started at ");
 });
 
 // let expressRouter = new mongoose.model('expressRouter',routerSchema,"expressDetails");

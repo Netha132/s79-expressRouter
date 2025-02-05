@@ -15,7 +15,7 @@ function Signup() {
   let profilePicInputRef = useRef();
 
   useEffect(()=>{
-    axios.defaults.baseURL="http://localhost:2233";
+    axios.defaults.baseURL="";
 
     axios.defaults.headers.common['Authorization'] = localStorage.getItem("token");
   },[])

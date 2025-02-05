@@ -15,7 +15,7 @@ function Login() {
 
   useEffect(() => {
 
-    axios.defaults.baseURL="http://localhost:2233";
+    axios.defaults.baseURL="";
     
     if(localStorage.getItem("token")){
       // onValidateToken();

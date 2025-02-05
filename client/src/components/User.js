@@ -18,7 +18,7 @@ function User() {
       body:dataToSend
     }
 
-    let JSONData = await fetch("http://localhost:2233/deleteProfile/deleteProfile",reqOptions);
+    let JSONData = await fetch("/deleteProfile/deleteProfile",reqOptions);
     let JSOData= await JSONData.json();
 
     console.log(JSOData)
@@ -42,7 +42,7 @@ function User() {
         </div>
         <img
           className="userProfile"
-          src={`http://localhost:2233/${userDetails.profilePic}`}
+          src={`/${userDetails.profilePic}`}
           alt=""
         ></img>
       </div>

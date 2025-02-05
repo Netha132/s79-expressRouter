@@ -28,7 +28,7 @@ function UpdateProfile() {
   
 
   useEffect(() => {
-    axios.defaults.baseURL = "http://localhost:2233";
+    axios.defaults.baseURL = "";
 
     axios.defaults.headers.common['Authorization'] = localStorage.getItem("token");
 
@@ -37,7 +37,7 @@ function UpdateProfile() {
     emailInputRef.current.value = userDetails.email;
     phoneInputRef.current.value = userDetails.phone;
     // passwordInputRef.current.value = userDetails.password;
-    setUpdateProfilePic(`http://localhost:2233/${userDetails.profilePic}`);
+    setUpdateProfilePic(`/${userDetails.profilePic}`);
   }, []);
 
   // let onUpdateProfile = async () => {
